@@ -44,8 +44,12 @@ namespace AcyclicGraphPathFinder
                     if (!tempCurrentList.Contains(connectedNode.Key))
                         tempCurrentList.Add(connectedNode.Key);
 
-                    results.Add(tempCurrentList);
-
+                    var result = new List<int>();
+                    
+                    result.AddRange(tempCurrentList);
+                    
+                    results.Add(result);
+                   
                     continue;
                 }
 
